@@ -1,0 +1,5 @@
+%{
+  "briefly": {:hex, :briefly, "0.3.0", "16e6b76d2070ebc9cbd025fa85cf5dbaf52368c4bd896fb482b5a6b95a540c2f", [:mix], [], "hexpm", "c6ebf8fc3dcd4950dd10c03e953fb4f553a8bcf0ff4c8c40d71542434cd7e046"},
+  "iona": {:hex, :iona, "0.4.1", "a679644b718d6b09bfbd842c4baa6009c9a8e5ef5c3bdc95408d95413d3291cd", [:mix], [{:briefly, "~> 0.3", [hex: :briefly, repo: "hexpm", optional: false]}, {:porcelain, "~> 2.0", [hex: :porcelain, repo: "hexpm", optional: false]}], "hexpm", "201ff4484cee612bf01df1b91390adb63bb43008ccd11403f1cc687c9e7f9e2b"},
+  "porcelain": {:hex, :porcelain, "2.0.3", "2d77b17d1f21fed875b8c5ecba72a01533db2013bd2e5e62c6d286c029150fdc", [:mix], [], "hexpm", "dc996ab8fadbc09912c787c7ab8673065e50ea1a6245177b0c24569013d23620"},
+}
