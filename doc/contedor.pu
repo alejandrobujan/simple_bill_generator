@@ -1,0 +1,24 @@
+@startuml Bill Generator pipe and filter
+title Bill Generator pipe and filter (nivel de contedor)
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+System_Ext(client, "Cliente", "Quere facer uso do sistema")
+
+Boundary(pipeline_system, "Sistema en pipeline"){
+    Component(bill_generator, "Bill Generator", "Interface coa que se comunica o usuario")
+    Component(bill_calculator, "Bill Calculator", "Filtro encargado de calcular os prezos de cada liña de factura así como o total desta.")
+    Component(latex_formatter, "LaTeX Formatter", "Filtro encargado de formatear e embeber a factura xa calculada en código LaTeX.")
+    Component(latex_to_pdf, "LaTeX to PDF", "Filtro encargado de compilar o código LaTeX, xerando, e exportando a factura en formato PDF.")
+}
+
+Rel(client, bill_generator, "Envía", "Petición ao Bill Generator.", "Introduce a petición ao pipeline")
+Rel(bill_generator, bill_calculator, "Envía", "Os datos da factura.", "Introduce a os datos na calculadora para ser computados e procesados.")
+Rel(bill_calculator, latex_formatter, "Envía", "Os datos da factura e o total global e por liñas xa calculados.", "Introduce os datos ao formateador para xerar o código.")
+Rel(latex_formatter, latex_to_pdf, "Envía", "O código LaTeX relativo á factura.", "Introduce o código ao filtro compilador para xerar o documento.")
+Rel(latex_to_pdf, bill.pdf, "Xera", "A factura en formato PDF", "Exporta o documento con nome en base á data e hora no directorio tmp/")
+
+
+
+SHOW_FLOATING_LEGEND()
+
+@enduml

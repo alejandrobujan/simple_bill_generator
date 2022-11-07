@@ -1,0 +1,13 @@
+@startuml Bill Generator pipe and filter
+title Bill Generator pipe and filter (nivel de contexto)
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+System_Ext(client, "Cliente", "Quere facer uso do sistema")
+System(pipeline_system, "Sistema en pipeline", "Recibe a petición, procésaa filtro a filtro e xera un output.")
+
+Rel(client, pipeline_system, "Envía", "Petición ao Bill Generator", "Introduce a petición ao pipeline")
+Rel(pipeline_system, bill.pdf, "Xera", "Saída", "Resposta á instrución de entrada")
+
+SHOW_FLOATING_LEGEND()
+
+@enduml
