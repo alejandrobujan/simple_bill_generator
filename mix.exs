@@ -15,7 +15,8 @@ defmodule BillGenerator.MixProject do
   def application do
     [
       applications: [:iona],
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {BillGenerator.Application, []}
     ]
   end
 
