@@ -6,7 +6,7 @@ defmodule BillGenerator.Application do
   use Application
 
   @impl true
-  def start(_type, _args) do
+  def start(_type \\ :default, _args \\ []) do
     children = [
       # Starts a worker by calling: BillGenerator.Worker.start_link(arg)
       # {BillGenerator.Worker, arg}
