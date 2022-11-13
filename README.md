@@ -35,7 +35,7 @@ Antes de nada, para compilar e inicializar todo o entorno de execución Elixir u
 
 (Poden saltar warnings na primeira vez, isto son advertencias relativas a código dunha dependencia, só ocorre a primeira vez. Non corresponde ao contexto da práctica.)
 
-Para xerar unha factura precisaremos unha lista de tuplas de producto e cantidade deste, formando así a estrutura dunha factura. Tamén precisaremos un comprador e un vendedor (ambos son strings):
+Para xerar unha factura precisaremos unha lista de tuplas de produto e cantidade deste, formando así a estrutura dunha factura. Tamén precisaremos un comprador e un vendedor (ambos son strings):
 
 ```elixir
 list = [{%Product{name: "iPhone 14 Pro", price: 1319.99}, 1},
