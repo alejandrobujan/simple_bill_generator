@@ -28,3 +28,6 @@ dbus-*.tar
 
 # MacOS preferences
 .DS_Store
+
+# Generated PDF files
+/out/

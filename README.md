@@ -35,12 +35,6 @@ Antes de nada, para compilar e inicializar todo o entorno de execución Elixir u
 
 (Poden saltar warnings na primeira vez, isto son advertencias relativas a código dunha dependencia, só ocorre a primeira vez. Non corresponde ao contexto da práctica.)
 
-Unha vez dentro, lánzanse as implementacións de GenServer con:
-
-```elixir
-BillGenerator.Application.start()
-```
-
 Para xerar unha factura precisaremos unha lista de tuplas de producto e cantidade deste, formando así a estrutura dunha factura. Tamén precisaremos un comprador e un vendedor (ambos son strings):
 
 ```elixir
@@ -62,13 +56,13 @@ seller = "Sainsbury's, 15-17 Tottenham Ct Rd, London W1T 1BJ, UK"
 purchaser = "John Smith, 7 Horsefair Green, Otterbourne SO21 1GN, UK"
 ```
 
-Para xerar un pdf, enviamos este input ao filtro que serve como interface ao usuario:
+Para xerar un pdf, enviamos este input ao sistema:
 
 ```elixir
-BillGenerator.generate(list, seller, purchaser)
+BillGenerator.Application.generate(list, seller, purchaser)
 ```
 
-Agora, dentro do directorio `tmp` podemos atopar a factura xerada, gardada cun nome con patrón `bill-<y>-<m>-<d>-<h>-<M>-<s>.pdf` que dependerá da data e hora na que foi xerada. 
+Agora, dentro do directorio `out` podemos atopar a factura xerada, gardada cun nome con patrón `bill-<y>-<m>-<d>-<h>-<M>-<s>.pdf` que dependerá da data e hora na que foi xerada. 
 
 Neste caso, xerarase un documento co seguinte contido:
 
@@ -76,7 +70,10 @@ Neste caso, xerarase un documento co seguinte contido:
 
 ## Outra documentación
 
-Os diagramas C4 atópanse no directorio `doc` do repositorio.
+Os diagramas C4 atópanse no directorio `doc` do repositorio:
++ [Contexto](doc/contexto.png)
++ [Contedor](doc/contedor.png)
++ [Compoñente](doc/componhente.png)
 
 ## Autoría
 

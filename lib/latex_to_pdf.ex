@@ -26,7 +26,7 @@ defmodule LaTeXToPdf do
   @impl true
   def handle_cast({:generate, latex}, data) do
     filename = generate_filename()
-    if !File.exists?("tmp/"), do: File.mkdir("tmp/")
+    if !File.exists?("out/"), do: File.mkdir("out/")
     Iona.source(latex) |> Iona.write!(filename)
     Logger.info("[LaTeXToPdf] PDF Created. Output file: #{filename}")
     {:noreply, [{filename, latex} | data]}
@@ -35,7 +35,7 @@ defmodule LaTeXToPdf do
   @spec generate_filename() :: String.t()
   defp generate_filename() do
     {{y, mon, d},{h, min, s}} = :calendar.local_time()
-    "tmp/bill-#{y}-#{mon}-#{d}-#{h}-#{min}-#{s}.pdf"
+    "out/bill-#{y}-#{mon}-#{d}-#{h}-#{min}-#{s}.pdf"
   end
 
 end

@@ -2,18 +2,11 @@ defmodule IntegrationTest do
   use ExUnit.Case
 
   setup do
-    BillGenerator.start_link([])
     BillCalculator.start_link([])
     LaTeXFormatter.start_link([])
     LaTeXToPdf.start_link([])
 
     on_exit(fn ->
-      try do
-        BillGenerator.stop()
-      catch
-        :exit, {:noproc, _} -> :ok
-      end
-
       try do
         BillCalculator.stop()
       catch
@@ -36,7 +29,7 @@ defmodule IntegrationTest do
 
   test "file creation" do
 
-    initial_file_count = Enum.count(Path.wildcard("tmp/*"))
+    initial_file_count = Enum.count(Path.wildcard("out/*"))
     seller = "Sainsbury's, 15-17 Tottenham Ct Rd, London W1T 1BJ, UK"
     purchaser = "John Smith, 7 Horsefair Green, Otterbourne SO21 1GN, UK"
     items = [{%Product{name: "Rice", price: 1.00}, 2},
@@ -45,10 +38,10 @@ defmodule IntegrationTest do
     {%Product{name: "Pizza", price: 2.80}, 3},
     {%Product{name: "Peas", price: 1.00}, 1}]
 
-    BillGenerator.generate(items, seller, purchaser)
+    BillGenerator.Application.generate(items, seller, purchaser)
     Process.sleep(2000)
 
-    current_file_count = Enum.count(Path.wildcard("tmp/*"))
+    current_file_count = Enum.count(Path.wildcard("out/*"))
 
     assert current_file_count == initial_file_count + 1
   end
