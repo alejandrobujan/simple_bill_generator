@@ -23,7 +23,8 @@ defmodule BillGenerator.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      iona: "~> 0.4"
+      {:iona, "~> 0.4"},
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
   end
 end
