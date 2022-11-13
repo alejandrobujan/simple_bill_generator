@@ -1,6 +1,6 @@
 # Bill Generator
 
-Bill Generator é unha implementación en [Elixir](https://elixir-lang.org/) dunha arquitectura pipe and filter, sendo cada un destos filtros unha implementación de [GenServer](https://hexdocs.pm/elixir/1.12/GenServer.html). Baséase na xeración de facturas en formato PDF a partires dunha lista de productos e cantidades, un comprador, e un vendedor, usando código LaTeX como intermediario. 
+Bill Generator é unha implementación en [Elixir](https://elixir-lang.org/) dunha arquitectura pipe and filter, sendo cada un destos filtros unha implementación de [GenServer](https://hexdocs.pm/elixir/1.12/GenServer.html). Baséase na xeración de facturas en formato PDF a partires dunha lista de produtos e cantidades, un comprador, e un vendedor, usando código LaTeX como intermediario. 
 
 ## Instalación
 

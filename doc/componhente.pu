@@ -20,9 +20,9 @@ System_Boundary(pipeline_system, "Bill Generator"){
 System_Ext(latex_to_pdf2, "Iona (Document generation using LaTeX)", "Dependencia que compila código LaTeX e xera documentos PDF.")
 
 
-Rel(client, bill_calculator1, "Envía", "Petición ao sistema", "Introduce a petición ao sistema cos productos, cantidades, comprador e vendedor.")
+Rel(client, bill_calculator1, "Envía", "Petición ao sistema", "Introduce a petición ao sistema cos produtos, cantidades, comprador e vendedor.")
 Rel(bill_calculator1, latex_formatter1, "Envía", "Os datos da factura e o total global e por liñas xa calculados.", "Introduce os datos ao formateador para xerar o código.")
-Rel(latex_formatter1, latex_formatter2, "Envía", "O fragmento de\n código LaTeX\n relativo aos\n productos e\n prezos calculados.", "Embebe o código\n das liñas da factura\n (e total) dentro do código da estrutura completa da factura.")
+Rel(latex_formatter1, latex_formatter2, "Envía", "O fragmento de\n código LaTeX\n relativo aos\n produtos e\n prezos calculados.", "Embebe o código\n das liñas da factura\n (e total) dentro do código da estrutura completa da factura.")
 Rel(latex_formatter2, latex_to_pdf1, "Envía", "O código LaTeX relativo á factura.", "Introduce o código ao filtro xestor de\n compilación para xerar o documento.")
 Rel(latex_to_pdf1, latex_to_pdf2, "Envía", "O código LaTeX completo e o nome do ficheiro onde se vai gardar.", "Introduce o código fonte no compilador\n e o nome do ficheiro.")
 Rel(latex_to_pdf2, bill.pdf, "Xera", "A factura en formato PDF", "Exporta o documento co nome previamente calculado no directorio out/")
