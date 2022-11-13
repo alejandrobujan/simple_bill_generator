@@ -1,6 +1,5 @@
 defmodule LaTeXFormatterTest do
   use ExUnit.Case
-  doctest LaTeXFormatter
 
   test "LaTeX code generation" do
     seller = "Sainsbury's, 15-17 Tottenham Ct Rd, London W1T 1BJ, UK"
