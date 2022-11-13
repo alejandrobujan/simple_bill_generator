@@ -74,6 +74,7 @@ Os diagramas C4 atópanse no directorio `doc` do repositorio:
 + [Contexto](doc/contexto.png)
 + [Contedor](doc/contedor.png)
 + [Compoñente](doc/componhente.png)
++ [Código](doc/codigo.png)
 
 ## Autoría
 
