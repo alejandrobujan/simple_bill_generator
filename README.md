@@ -76,6 +76,12 @@ Os diagramas C4 atópanse no directorio `doc` do repositorio:
 + [Compoñente](doc/componhente.png)
 + [Código](doc/codigo.png)
 
+O proxecto tamén ten soporte para xerar documentación HTML con [ExDoc](https://github.com/elixir-lang/ex_doc), sen embargo, hai que ter en conta que a xeración destes documentos realizaríase no directorio `doc` e eliminaría todo o contido existente nese directorio como todo relacionado cos diagramas C4 entre outros. Unha boa solución sería mover os diagramas e imaxes actualmente no directorio `doc` a outro directorio, pero por agora, iso xeraría un conflicto coas especificacións do enunciado. 
+
+De todas formas para xerar a documentación HTML (sendo consciente de que se sobreescribe o directorio `doc`):
+
+    mix docs
+
 ## Autoría
 
 Este proxecto foi creado por **Alejandro Buján Pampín** no marco da segunda práctica da asignatura Arquitectura do Software, do Grao en Enxeñaría Informática da [Universidade da Coruña](http://udc.es).
