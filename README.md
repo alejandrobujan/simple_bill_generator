@@ -84,6 +84,7 @@ De todas formas para xerar a documentación HTML (sendo consciente de que se sob
 
 ## Autoría
 
-Este proxecto foi creado por **Alejandro Buján Pampín** no marco da segunda práctica da asignatura Arquitectura do Software, do Grao en Enxeñaría Informática da [Universidade da Coruña](http://udc.es).
+Este proxecto foi creado por [Alejandro Buján 
+Pampín](mailto:alejandro.bujan.pampin@gmail.com).
 
 LaTeX é software libre e non se distribúe con este proxecto (non afiliado). Consulte a páxina de inicio de [LaTeX](https://www.latex-project.org/) para obter máis información.
